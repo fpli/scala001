@@ -4,7 +4,7 @@ package chapter003
 object LoopTest {
 
   def main(args: Array[String]): Unit = {
-    for(i <- 1 to 20){
+    for (i <- 1 to 20){
       println(i)
     }
     println("a very colorful line separator------")
