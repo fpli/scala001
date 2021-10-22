@@ -23,7 +23,7 @@ object Test03_TestOperator {
     println(s1 == s2)
     println(s1.equals(s2))
 
-    // address is same
+    // address is same ??
     println(s1.eq(s2))
 
     // 3 logic operator
@@ -37,7 +37,7 @@ object Test03_TestOperator {
 
     //
     def isNotEmpty(str: String): Boolean = {
-      str != null && ! ("".equals(str.trim))
+      str != null && ! "".equals(str.trim)
     }
 
     println(isNotEmpty(null))
