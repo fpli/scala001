@@ -15,10 +15,12 @@ object Test04_MatchObject {
 
 class Student(val name: String, val age: Int)
 
-object Student{
+object Student {
+
   def apply(name: String, age: Int): Student = new Student(name, age)
+
   def unapply(student: Student): Option[(String, Int)] = {
-    if (student == null){
+    if (student == null) {
       None
     } else {
       Some((student.name, student.age))
