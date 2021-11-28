@@ -44,14 +44,14 @@ class Student(name: String, age: Int, address: String) extends Talent with Knowl
 
 trait Talent{
 
-  def singing()
+  def singing(): Unit
 
-  def dancing()
+  def dancing(): Unit
 }
 
 trait Knowledge {
 
-  def increase()
+  def increase(): Unit
 
 }
 
