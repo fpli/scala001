@@ -24,7 +24,7 @@ object Test14_HighLevelFunction_Map {
     // 3 flat
     val nestedList: List[List[Int]] = List(List(1, 2, 3), List(4, 5), List(6, 7, 8, 9))
 
-    val flatList = nestedList(0) ::: nestedList(1) ::: nestedList(2)
+    val flatList = nestedList.head ::: nestedList(1) ::: nestedList(2)
     println(flatList)
     val flatList2 = nestedList.flatten
     println(flatList2)
