@@ -46,7 +46,7 @@ object Test09_MutableMap {
     println(map2)
 
     println("=++++++++++===== ")
-    //map2 ++= map1 //error
+    //map2 ++= map1 //error because map2 is immutable, so it's incorrect.
     val map3: Map[String, Int] = map2 ++ map1
     println(map1)
     println(map2)
