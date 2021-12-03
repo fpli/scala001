@@ -26,7 +26,7 @@ class Student(name: String, age: Int, address: String) extends Talent with Knowl
   def printInfo(): Unit = {
     println("scala method define.")
     println("welcome to write scala.")
-    println(s"${name}---${age}-----${address}")
+    println(s"$name---${age + 1}-----$address")
   }
 
   override def singing(): Unit = {
