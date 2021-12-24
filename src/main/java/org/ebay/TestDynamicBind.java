@@ -1,4 +1,4 @@
-package org.ebay;
+package org.ebay.scala.org.ebay;
 
 public class TestDynamicBind {
 
