@@ -51,5 +51,11 @@ object Test09_MutableMap {
     println(map1)
     println(map2)
     println(map3)
+
+    val result: Map[String, Int] = map1.foldLeft(map2) {
+      case (map, (key, cnt)) =>
+        val newCnt = map.getOrElse(key, 0) + cnt
+        map.updated(key, newCnt)
+    }
   }
 }
