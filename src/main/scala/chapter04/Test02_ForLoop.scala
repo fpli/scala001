@@ -130,7 +130,9 @@ object Test02_ForLoop {
     val b: IndexedSeq[Int] = for (i <- 1 to 10) yield i
     println("b = " + b)
 
-    val c: IndexedSeq[Int] = for (i <- 1 to 10) yield i * 2
+    val c: IndexedSeq[Int] = for (i <- 1 to 10) yield {
+      i * 2
+    }
     println("c = " + c)
 
     val d: IndexedSeq[Int] = for (i <- 1 to 10) yield i * i
