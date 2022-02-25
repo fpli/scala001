@@ -1,6 +1,8 @@
 package org.ebay.scala
 package chapter05
 
+import scala.annotation.tailrec
+
 object Test06_HighOrderFunction {
 
   def main(args: Array[String]): Unit = {
@@ -90,10 +92,11 @@ object Test06_HighOrderFunction {
 
     /**
      * 在Scala中可以嵌套定义方法。例如以下对象提供了一个factorial方法来计算给定数值的阶乘：
-     * @param x
+     * @param x x!
      * @return
      */
     def factorial(x: Int): Int = {
+      @tailrec
       def fact(x: Int, accumulator: Int): Int = {
         if (x <= 1) accumulator
         else fact(x - 1, x * accumulator)
