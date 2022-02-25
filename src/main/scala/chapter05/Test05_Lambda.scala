@@ -51,7 +51,17 @@ object Test05_Lambda {
     println(dualFunctionOneAndTwo( -_ + _))
 
     //
-    println("---- -- - -- " * 8)
+    println("---- -- supplier interface - -- " * 4)
+    val supplier = () => 20
+    println(supplier())
 
+    println("functional interface " * 4)
+    val functionalInterface = (x: Int) => x * 20
+    println(functionalInterface(10))
+
+    println("predicate interface " * 4)
+    val predicate = (x: Int) => x > 50
+    println(predicate(20))
+    println(predicate(70))
   }
 }
