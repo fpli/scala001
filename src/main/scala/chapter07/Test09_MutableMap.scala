@@ -40,7 +40,7 @@ object Test09_MutableMap {
     println()
 
     // 5. 合并两个map
-    val map2: Map[String, Int] = Map("aaa" -> 11, "b" ->29, "hello" -> 5)
+    val map2: Map[String, Int] = Map("aaa" -> 11, "b" -> 29, "hello" -> 5)
     //map1 ++= map2
     println(map1)
     println(map2)
@@ -52,10 +52,13 @@ object Test09_MutableMap {
     println(map2)
     println(map3)
 
+    println("------------")
     val result: Map[String, Int] = map1.foldLeft(map2) {
       case (map, (key, cnt)) =>
         val newCnt = map.getOrElse(key, 0) + cnt
         map.updated(key, newCnt)
     }
+    println(result)
+    println(map1)
   }
 }
