@@ -16,6 +16,7 @@ object test06_Break {
       }
     } catch {
       case e: Exception =>
+        println(e.getMessage)
 
     }
 
