@@ -21,8 +21,7 @@ object Timer {
     oncePerSecond(timeFlies)
 
     // Anonymous
-    oncePerSecond(() =>
-      println("time flies like an arrow..."))
+    oncePerSecond(() => println("time flies like an arrow..."))
   }
 
 }
