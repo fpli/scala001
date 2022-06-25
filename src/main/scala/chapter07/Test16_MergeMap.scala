@@ -19,5 +19,6 @@ object Test16_MergeMap {
     )
 
     println(map3)
+    println(map2 == map3)
   }
 }

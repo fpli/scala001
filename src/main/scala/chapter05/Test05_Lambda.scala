@@ -6,6 +6,7 @@ object Test05_Lambda {
     // JavaScript Lambda
     val fun = (name: String) => {println(name)}
     fun("atguigu")
+    println(fun)
     ((name: String) => println(name))("alice")
     // c callback (function's point)
     println("--------- " * 8)
