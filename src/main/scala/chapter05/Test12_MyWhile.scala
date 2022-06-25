@@ -1,6 +1,8 @@
 package org.ebay.scala
 package chapter05
 
+import scala.annotation.tailrec
+
 
 object Test12_MyWhile {
   def main(args: Array[String]): Unit = {
@@ -63,6 +65,7 @@ object Test12_MyWhile {
     }
 
     // 3 柯里化实现
+    @tailrec
     def myWhile3(condition: => Boolean)(op: => Unit): Unit = {
       if (condition){
         op
