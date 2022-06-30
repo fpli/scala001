@@ -44,7 +44,7 @@ object Test05_MatchCaseClass {
       }
     }
     val someSms = SMS("12345", "Are you there?")
-    val someVoiceRecording = VoiceRecording("Tom", "voicerecording.org/id/123")
+    val someVoiceRecording = VoiceRecording("Tom", "voiceRecording.org/id/123")
 
     println(showNotification(someSms))  // prints You got an SMS from 12345! Message: Are you there?
 

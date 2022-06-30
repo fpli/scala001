@@ -11,9 +11,11 @@ object Test06_PartialFunction {
     // 2.
     val newList2 = list.map(
       tuple => {
+//        println(tuple)
         tuple match {
           case (word, count) => (word, count * 2)
         }
+//        println(tuple)
       }
     )
     println(newList2)
@@ -32,6 +34,7 @@ object Test06_PartialFunction {
 
     val negativeAbs: PartialFunction[Int, Int] = {
       case x if x < 0 => -x
+      case  0 => 0
     }
 
     val zeroAbs: PartialFunction[Int, Int] = {
