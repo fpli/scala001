@@ -30,6 +30,7 @@ object Test06_PartialFunction {
     // 4 partial function  example: abs(x)
     val positiveAbs: PartialFunction[Int, Int] = {
       case x if x > 0 => x
+      case 0 => 0
     }
 
     val negativeAbs: PartialFunction[Int, Int] = {
