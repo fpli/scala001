@@ -71,6 +71,11 @@ object Test02_MatchTypes {
     // match list 2
     val list1 = List(1, 2, 5, 7, 24)
     val list = List(24)
+    list1 match {
+      case first :: second :: rest => println(s"first: $first, second: $second, rest: $rest")
+      case _ => println("something esle")
+    }
+
     list match {
       case first :: second :: rest => println(s"first: $first, second: $second, rest: $rest")
       case _ => println("something esle")
