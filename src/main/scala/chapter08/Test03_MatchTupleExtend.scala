@@ -4,12 +4,14 @@ package chapter08
 object Test03_MatchTupleExtend {
   def main(args: Array[String]): Unit = {
     // match variable
-    val (x, y) = (10, "hello")
+    val tu@(x, y) = (10, "hello")
     println(s"x: $x, y: $y")
+    println(s"tu: $tu")
 
     println("------ " * 10)
-    val List(first, second, _*) = List(23, 15, 9, 78)
+    val li@List(first, second, _*) = List(23, 15, 9, 78)
     println(s"first: $first, second: $second")
+    println(s"li: $li")
 
     println("******** " * 10)
     val fir :: sec :: rest = List(23, 15, 9, 78)

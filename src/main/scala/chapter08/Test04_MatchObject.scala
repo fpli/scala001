@@ -27,7 +27,7 @@ object Test04_MatchObject {
 
     //val name = CustomerID.unapply(customer2ID).get
 
-    val CustomerID(name2) = "--asdfasdfasdf"
+    val CustomerID(name2) = "hhh--asdfasdfasdf"
     println(name2)
 
     val CustomerID(name3) = "-asdfasdfasdf"
