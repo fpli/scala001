@@ -9,7 +9,7 @@ trait User {
 
 trait Tweeter {
 
-  this : User =>
+  self : User =>
 
   def tweet(tweetText: String): Unit = println(s"$username: $tweetText")
 

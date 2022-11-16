@@ -21,12 +21,13 @@ object Test10_Recursion {
   def tailFact(n: Int): Int = {
     @tailrec
     def loop(n: Int, currentResult: Int): Int = {
-      if (n == 0){
+      if (n == 0) {
         currentResult
       } else {
         loop(n - 1, currentResult * n)
       }
     }
+    // call loop
     loop(n, 1)
   }
 }
