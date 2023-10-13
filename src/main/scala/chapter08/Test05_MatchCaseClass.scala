@@ -35,8 +35,8 @@ object Test05_MatchCaseClass {
 
     def showNotification(notification: Notification): String = {
       notification match {
-        case Email(sender, title, _) =>
-          s"You got an email from $sender with title: $title"
+        case email@Email(sender, title, _) =>
+          s"You got an email from $sender with title: ${email.title}, tilte: $title"
         case SMS(number, message) =>
           s"You got an SMS from $number! Message: $message"
         case VoiceRecording(name, link) =>
@@ -54,9 +54,9 @@ object Test05_MatchCaseClass {
     println("--------------pattern guards--------")
     def showImportantNotification(notification: Notification, importantPeopleInfo: Seq[String]): String = {
       notification match {
-        case Email(sender, _, _) if importantPeopleInfo.contains(sender) =>
+        case email@Email(sender, _, _) if importantPeopleInfo.contains(sender) =>
           "You got an email from special someone!"
-        case SMS(number, _) if importantPeopleInfo.contains(number) =>
+        case sms@SMS(number, _) if importantPeopleInfo.contains(number) =>
           "You got an SMS from special someone!"
         case other =>
           showNotification(other) // nothing special, delegate to our original showNotification function
