@@ -18,16 +18,16 @@ object Test10_Recursion {
   }
 
   // 尾递归实现
-  def tailFact(n: Int): Int = {
+  private def tailFact(n: Int): Int = {
     @tailrec
-    def loop(n: Int, currentResult: Int): Int = {
-      if (n == 0) {
+    def loop(n: Int, currentResult: Int = 1): Int = {
+      if (n <= 0) {
         currentResult
       } else {
         loop(n - 1, currentResult * n)
       }
     }
     // call loop
-    loop(n, 1)
+    loop(n)
   }
 }
